@@ -1,0 +1,33 @@
+.advantages {
+  display: flex;
+  gap: 30px;
+}
+.adv-item {
+  max-width: 270px;
+}
+
+.adv-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+.adv-icon {
+  width: 70px;
+  height: 70px;
+}
+.adv-title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.adv-descript {
+  line-height: 1.71;
+  color: $sec-text-color;
+}

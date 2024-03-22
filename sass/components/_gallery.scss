@@ -1,0 +1,35 @@
+.gallery {
+  padding-top: 0;
+}
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.gallery-title {
+  @extend %section-title;
+}
+
+.gallery-img {
+  position: relative;
+}
+.gallery-img-title-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 70px;
+  background-color: #2f303acc;
+}
+
+.gallery-img-title {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $hero-text-color;
+}

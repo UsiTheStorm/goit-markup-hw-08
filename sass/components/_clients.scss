@@ -1,0 +1,35 @@
+.clients {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.client-title {
+  @extend %section-title;
+}
+
+.cli-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid $icon-logo-color;
+  border-radius: 4px;
+
+  fill: $icon-logo-color;
+
+  transition:
+    fill $cubic,
+    border-color $cubic;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}
+.cli-icon {
+  height: 60px;
+  width: 106px;
+}

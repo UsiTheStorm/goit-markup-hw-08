@@ -1,0 +1,72 @@
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-title {
+  @extend %section-title;
+}
+
+.team {
+  background-color: $sec-bg-color;
+}
+.memb {
+  text-align: center;
+  background-color: $prim-bg-color;
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.memb-sign-container {
+  padding: 30px 32px;
+}
+.memb-name {
+  margin-bottom: 10px;
+
+  line-height: 1.19;
+  font-size: 16px;
+  font-weight: 500;
+}
+.memb-position {
+  margin-bottom: 16px;
+
+  color: $sec-text-color;
+  line-height: 1.19;
+  font-size: 16px;
+}
+.memb-net-container {
+  display: flex;
+  gap: 10px;
+}
+
+.net-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  text-align: center;
+  background-color: $prim-bg-color;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    transition: background-color $cubic;
+    background-color: $accent-color;
+  }
+
+  &:focus .net-icon,
+  &:hover .net-icon {
+    fill: #fff;
+  }
+}
+.net-icon {
+  height: 20px;
+  width: 20px;
+
+  transition: fill $cubic;
+  fill: #afb1b8;
+}
