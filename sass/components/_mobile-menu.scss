@@ -1,0 +1,123 @@
+@media screen and (max-width: $tablet) {
+  .mobile-menu {
+    position: fixed;
+    background-color: $prim-bg-color;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform, $cubic;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    position: relative;
+    padding: 16px 25px 48px 25px;
+    height: 100vh;
+  }
+
+  .mobile-menu-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    height: 40px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $accent-color;
+    }
+  }
+
+  .mobile-navbar-link {
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 46.88px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $prim-text-color;
+    margin-top: 32px;
+  }
+
+  .mobile-active {
+    color: $accent-color;
+  }
+
+  .mobile-nav-tel {
+    display: block;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 39.84px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $accent-color;
+  }
+
+  .mobile-nav-mail {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $sec-text-color;
+
+    margin-top: 32px;
+  }
+
+  .mobile-net-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+  }
+
+  .mobile-net {
+    padding: 0 10px;
+    border-right: 1px solid #21212133;
+
+    &:last-child {
+      padding-right: 0;
+      border: none;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .mobile-net-link {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $accent-color;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .mobile-menu {
+    display: none;
+  }
+}
