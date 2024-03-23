@@ -1,73 +1,177 @@
-%transition {
-  transition: color $cubic;
-  color: $accent-color;
-  fill: currentColor;
-}
 .header {
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
 }
+
 .main-nav {
   display: flex;
   align-items: center;
-}
-.navbar {
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.nav-links {
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
+@media screen and (max-width: $tablet) {
+  .nav-links {
+    display: none;
+  }
+  .nav-address-list {
+    display: none;
+  }
+  .burger-btn {
+    height: 40px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: $accent-color;
+    }
+  }
 }
 
-.navbar-link {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (min-width: $tablet) {
+  .header {
+    padding: 0;
+  }
 
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: $prim-text-color;
+  .burger-btn {
+    display: none;
+  }
 
-  &.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
 
+  .nav-links {
+    display: flex;
+    margin-left: auto;
+    gap: 50px;
+
+    margin-left: 88px;
+  }
+
+  .nav-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-left: 90px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  .navbar-link {
+    position: relative;
     display: block;
-    width: 100%;
-    height: 4px;
-    background: $accent-color;
-    border-radius: 2px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: $prim-text-color;
+
+    &:hover,
+    &:focus {
+      transition: color $cubic;
+      color: $accent-color;
+      fill: currentColor;
+    }
+
+    &.active::after {
+      content: '';
+
+      position: absolute;
+      bottom: -1px;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: $accent-color;
+      border-radius: 2px;
+    }
   }
 
-  &:hover,
-  &:focus {
-    @extend %transition;
+  .navbar-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $prim-text-color;
+    font-size: 12px;
+    line-height: 1.12;
+
+    color: $sec-text-color;
+
+    &:hover,
+    &:focus,
+    &:hover .nav-contact-icon,
+    &:focus .nav-contact-icon {
+      transition: color $cubic;
+      color: $accent-color;
+      fill: currentColor;
+    }
+  }
+
+  .active {
+    transition: color $cubic;
+    color: $accent-color;
+    fill: currentColor;
+  }
+
+  .nav-contact-icon {
+    display: inline-block;
+    fill: currentColor;
+
+    &.nav-phone-icon {
+      width: 10px;
+      height: 14px;
+    }
+
+    &.nav-mail-icon {
+      width: 14px;
+      height: 10px;
+    }
   }
 }
 
-.navbar-contact {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: $sec-text-color;
-
-  &:hover .nav-icon,
-  &:focus .nav-icon {
-    @extend %transition;
+@media screen and (min-width: $desktop) {
+  .nav-links {
+    margin-left: 93px;
   }
-}
 
-.active {
-  @extend %transition;
-}
+  .nav-address-list {
+    flex-direction: row;
+    gap: 50px;
 
-.nav-icon {
-  display: inline-block;
-  fill: currentColor;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-contact {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+
+    gap: 10px;
+  }
+
+  .nav-contact-icon {
+    &.nav-phone-icon {
+      width: 10px;
+      height: 16px;
+    }
+
+    &.nav-mail-icon {
+      width: 16px;
+      height: 12px;
+    }
+  }
 }
