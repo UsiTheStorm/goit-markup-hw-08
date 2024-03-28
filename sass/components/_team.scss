@@ -1,6 +1,8 @@
 .team-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
@@ -12,6 +14,8 @@
   background-color: $sec-bg-color;
 }
 .memb {
+  max-width: 450px;
+
   text-align: center;
   background-color: $prim-bg-color;
   box-shadow:
@@ -21,7 +25,8 @@
   border-radius: 0px 0px 4px 4px;
 }
 .memb-sign-container {
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 .memb-name {
   margin-bottom: 10px;
@@ -39,6 +44,7 @@
 }
 .memb-net-container {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -69,4 +75,29 @@
 
   transition: fill $cubic;
   fill: #afb1b8;
+}
+
+@media screen and (min-width: $tablet) {
+  .team-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .memb {
+    max-width: 354px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .team-container {
+    flex-wrap: nowrap;
+  }
+
+  .memb {
+    max-width: 270px;
+  }
+
+  .memb-sign-container {
+    padding-bottom: 30px;
+  }
 }
