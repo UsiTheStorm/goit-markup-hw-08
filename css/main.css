@@ -83,7 +83,7 @@ a {
   text-decoration: none;
 }
 
-.client-title, .team-title, .gallery-title {
+.client-title, .team-title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -364,27 +364,27 @@ a {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero-overlay {
-    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .hero-overlay {
-    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-overlay {
-    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero-overlay {
-    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero-overlay {
-    background-image: inear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero@2x.jpg");
   }
 }
 .hero-section {
@@ -499,37 +499,47 @@ a {
   }
 }
 .gallery {
-  padding-top: 0;
+  display: none;
 }
 
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+@media screen and (min-width: 1200px) {
+  .gallery {
+    display: block;
+    padding-top: 0;
+  }
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .gallery-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+  .gallery-img {
+    position: relative;
+    width: 370px;
+  }
+  .gallery-img-title-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  .gallery-img-title {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
 }
-
-.gallery-img {
-  position: relative;
-}
-
-.gallery-img-title-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.gallery-img-title {
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-
 .team-container {
   display: flex;
   justify-content: center;
