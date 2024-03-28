@@ -29,6 +29,11 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 @media screen and (min-width: $mobile) {
   .container {
     width: $mobile;
@@ -44,11 +49,11 @@ a {
   .container {
     width: $desktop;
   }
-}
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .is-hidden {

@@ -32,6 +32,11 @@ a {
   padding-right: 15px;
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -47,12 +52,11 @@ a {
   .container {
     width: 1200px;
   }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .is-hidden {
   position: absolute;
   width: 1px;
@@ -438,11 +442,12 @@ a {
 }
 .advantages {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
 .adv-item {
-  max-width: 270px;
+  max-width: 450px;
 }
 
 .adv-icon-container {
@@ -465,6 +470,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .adv-descript {
@@ -472,6 +478,26 @@ a {
   color: #757575;
 }
 
+@media screen and (min-width: 768px) {
+  .advantages {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .adv-item {
+    max-width: calc((100% - 30px) / 2);
+  }
+  .adv-title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantages {
+    flex-wrap: nowrap;
+  }
+  .adv-item {
+    max-width: calc((100% - 90px) / 4);
+  }
+}
 .gallery {
   padding-top: 0;
 }
