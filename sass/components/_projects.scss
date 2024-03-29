@@ -1,7 +1,6 @@
 // Кнопки фільтрів
 .filter {
   display: flex;
-  // justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
   gap: 8px;
@@ -51,12 +50,9 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  // align-items: stretch;
 }
 .proj-item {
-  // width: 370px;
   width: 450px;
-  // flex-grow: 1;
 }
 
 .proj-link {
@@ -111,20 +107,9 @@
   }
 }
 
-// .proj-description {
-//   font-size: 18px;
-//   line-height: 1.55;
-//   color: $footer-main-text-color;
-// }
-
 .proj-descript-block {
   display: block;
   flex-grow: 1;
-
-  // display: flex;
-  // flex-direction: column;
-  // align-items: stretch;
-  // justify-content: space-between;
 
   padding: 20px 24px;
 
