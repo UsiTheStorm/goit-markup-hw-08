@@ -1,7 +1,8 @@
 // Кнопки фільтрів
 .filter {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   gap: 8px;
 }
@@ -47,16 +48,23 @@
 // Проєкти
 .projects {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  // align-items: stretch;
 }
 .proj-item {
-  width: 370px;
+  // width: 370px;
+  width: 450px;
+  // flex-grow: 1;
 }
 
 .proj-link {
   display: block;
   transition: box-shadow $cubic;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &:hover,
   &:focus {
@@ -72,6 +80,7 @@
 }
 .proj-overlay {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   height: 100%;
@@ -80,8 +89,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 24px;
+  padding: 24px 24px;
   background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: $footer-main-text-color;
 
   transform: translateY(101%);
   transition: transform $cubic;
@@ -91,14 +104,28 @@
   }
 }
 
-.proj-description {
-  font-size: 18px;
-  line-height: 1.55;
-  color: $footer-main-text-color;
+@media screen and (max-width: 370px) {
+  .proj-overlay {
+    font-size: 16px;
+    line-height: 1.33;
+  }
 }
+
+// .proj-description {
+//   font-size: 18px;
+//   line-height: 1.55;
+//   color: $footer-main-text-color;
+// }
 
 .proj-descript-block {
   display: block;
+  flex-grow: 1;
+
+  // display: flex;
+  // flex-direction: column;
+  // align-items: stretch;
+  // justify-content: space-between;
+
   padding: 20px 24px;
 
   border-left: 1px solid #eeeeee;
@@ -118,4 +145,22 @@
   font-size: 16px;
   line-height: 1.87;
   color: $sec-text-color;
+}
+
+@media screen and (min-width: $tablet) {
+  .filter {
+    justify-content: center;
+  }
+  .projects {
+    justify-content: start;
+  }
+  .proj-item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .proj-item {
+    width: 370px;
+  }
 }
