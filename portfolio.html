@@ -30,38 +30,110 @@
           >
           <ul class="semantic-list nav-links">
             <li>
-              <a class="navbar-link link-undecor" href="./index.html">Студія</a>
+              <a
+                class="navbar-link navigation active link-undecor"
+                href="./index.html"
+                >Студія</a
+              >
             </li>
             <li>
-              <a class="navbar-link link-undecor active" href="./portfolio.html"
+              <a
+                class="navbar-link navigation link-undecor"
+                href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
             <li>
-              <a class="navbar-link link-undecor" href="#">Контакти</a>
+              <a class="navbar-link navigation link-undecor" href="#"
+                >Контакти</a
+              >
             </li>
           </ul>
         </nav>
 
+        <!-- Бургер меню -->
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg class="burger-menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu-container">
+            <button type="button" class="mobile-menu-close-btn" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-modal-close"></use>
+              </svg>
+            </button>
+            <ul class="semantic-list">
+              <li>
+                <a
+                  class="mobile-navbar-link mobile-active link-undecor"
+                  href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li>
+                <a
+                  class="mobile-navbar-link link-undecor"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a class="mobile-navbar-link link-undecor" href="#">Контакти</a>
+              </li>
+            </ul>
+
+            <div>
+              <ul class="semantic-list mobile-contact-list">
+                <li class="mobile-contact">
+                  <a class="mobile-nav-tel link-undecor" href="tel:380961111111"
+                    >+380961111111</a
+                  >
+                </li>
+                <li class="mobile-contact">
+                  <a
+                    class="mobile-nav-mail link-undecor"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="semantic-list mobile-net-list">
+                <li class="mobile-net">
+                  <a class="link-undecor mobile-net-link" href="#">Instagram</a>
+                </li>
+                <li class="mobile-net">
+                  <a class="link-undecor mobile-net-link" href="#">Twitter</a>
+                </li>
+                <li class="mobile-net">
+                  <a class="link-undecor mobile-net-link" href="#">Facebook</a>
+                </li>
+                <li class="mobile-net">
+                  <a class="link-undecor mobile-net-link" href="#">Linkedin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <!-- Контакты -->
-        <ul class="semantic-list nav-links nav-address-list">
+        <ul class="semantic-list nav-address-list">
           <li>
             <a
-              class="navbar-contact navbar-link link-undecor"
+              class="navbar-contact link-undecor"
               href="mailto:info@devstudio.com"
             >
-              <svg class="nav-icon" width="16" height="12">
+              <svg class="nav-contact-icon nav-mail-icon">
                 <use href="./images/icons.svg#icon-ico-envelope"></use>
               </svg>
               <span>info@devstudio.com</span></a
             >
           </li>
           <li>
-            <a
-              class="navbar-contact navbar-link link-undecor"
-              href="tel:380961111111"
-            >
-              <svg class="nav-icon" width="10" height="16">
+            <a class="navbar-contact link-undecor" href="tel:380961111111">
+              <svg class="nav-contact-icon nav-phone-icon">
                 <use href="./images/icons.svg#icon-ico-smartphone"></use>
               </svg>
               <span>+38 096 111 11 11</span>
